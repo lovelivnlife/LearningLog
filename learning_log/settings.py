@@ -145,6 +145,11 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     # Honor the 'X-Forward-Proto' header for request.is_secure().
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+    # Allow only Heroku to host the project.
+    ALLOWED_HOSTS = ['lovelivnlife.herokuapp.com']
+
+    DEBUG = False
+
     # Allow all host headers.
     ALLOWED_HOSTS = ['*']
 
